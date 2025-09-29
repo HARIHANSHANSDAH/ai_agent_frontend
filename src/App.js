@@ -21,7 +21,7 @@ function App() {
     formData.append("session_id", sessionId);
 
     try {
-      const res = await axios.post(`${backendUrl}/upload`, formData);
+      const res = await axios.post("https://ai-server-zf5u.onrender.com/upload", formData);
       setSheets(res.data.sheets);
       alert("File uploaded successfully!");
     } catch (err) {
@@ -34,7 +34,7 @@ function App() {
     if (!question) return alert("Enter a question!");
     setLoading(true);
     try {
-      const res = await axios.post(`${backendUrl}/ask`, {
+      const res = await axios.post("https://ai-server-zf5u.onrender.com/ask", {
         session_id: sessionId,
         question: question,
       });

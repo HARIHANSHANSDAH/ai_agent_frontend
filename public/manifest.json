@@ -1,6 +1,6 @@
 {
   "short_name": "CordlyAI",
-  "name": "Cordly AI Agent",
+  "name": "Cordly AI Web App",
   "icons": [
     {
       "src": "logo192.png",
@@ -13,8 +13,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#0c0c0d"
 }

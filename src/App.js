@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   const [file, setFile] = useState(null);
-  const [sessionId, setSessionId] = useState("session_1"); 
+  const sessionId = "session_1"; 
   const [sheets, setSheets] = useState([]);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -22,7 +22,7 @@ function App() {
     formData.append("session_id", sessionId);
 
     try {
-      const res = await axios.post("${backendUrl}/upload", formData);
+      const res = await axios.post(`${backendUrl}/upload`, formData);
       setSheets(res.data.sheets);
       alert("File uploaded successfully!");
     } catch (err) {
@@ -36,7 +36,7 @@ function App() {
     if (!question) return alert("Enter a question!");
     setLoading(true);
     try {
-      const res = await axios.post("${backendUrl}/ask", {
+      const res = await axios.post(`${backendUrl}/ask`, {
         session_id: sessionId,
         question: question,
       });

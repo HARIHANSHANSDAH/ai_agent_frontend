@@ -11,7 +11,7 @@ function App() {
   const [chart, setChart] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const backendUrl = process.env.BACKEND_URL 
+  const backendUrl = "https://ai-server-zf5u.onrender.com"; 
 
 
   const handleUpload = async () => {

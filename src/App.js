@@ -13,7 +13,6 @@ function App() {
 
   const backendUrl = "https://ai-server-zf5u.onrender.com";
 
-
   const handleUpload = async () => {
     if (!file) return alert("Please select a file");
 
@@ -30,7 +29,6 @@ function App() {
       alert("Upload failed!");
     }
   };
-
 
   const handleAsk = async () => {
     if (!question) return alert("Enter a question!");
@@ -73,13 +71,11 @@ function App() {
         </button>
       </div>
 
-    
       {sheets.length > 0 && (
         <div style={{ marginBottom: "20px" }}>
           <b>Sheets:</b> {sheets.join(", ")}
         </div>
       )}
-
 
       <div style={{ marginBottom: "20px" }}>
         <input
